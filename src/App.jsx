@@ -8,6 +8,17 @@ import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
   let [ListItems, setListItems] = useState([]);
+  let [taskVal, setTaskVal] = useState("");
+  let [dateVal, setdateVal] = useState("");
+
+  const takeInputTask = (event) => {
+    setTaskVal(event.target.value);
+  };
+
+  const takeInputDate = (e) => {
+    setdateVal(e.target.value);
+  };
+
   const createTask = (taskVal, dateVal) => {
     if (taskVal && dateVal) {
       const newList = {
@@ -16,7 +27,8 @@ function App() {
       };
       const newListItems = [...ListItems, newList];
       setListItems(newListItems);
-     
+      setTaskVal("")
+      setdateVal("")
     }
   };
 
@@ -32,7 +44,7 @@ function App() {
     <>
       <div className="container">
         <TodoName />
-        <TodoInput createTask={createTask}  />
+        <TodoInput createTask={createTask} taskVal={taskVal} dateVal={dateVal} takeInputDate={takeInputDate} takeInputTask={takeInputTask} />
       </div>
 
       <div className="container">

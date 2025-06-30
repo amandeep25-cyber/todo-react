@@ -1,17 +1,7 @@
 import "./TodoInput.css";
-import { useState } from "react";
 
-const TodoInput = ({ createTask }) => {
-  let [taskVal, setTaskVal] = useState("");
-  let [dateVal, setdateVal] = useState("");
-
-  const takeInputTask = (event) => {
-    setTaskVal(event.target.value);
-  };
-
-  const takeInputDate = (e) => {
-    setdateVal(e.target.value);
-  };
+const TodoInput = ({ createTask ,taskVal,takeInputTask,takeInputDate,dateVal }) => {
+  
 
   return (
     <>
