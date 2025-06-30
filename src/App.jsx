@@ -4,10 +4,10 @@ import TodoName from "./components/TodoName";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 import { useState } from "react";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
   let [ListItems, setListItems] = useState([]);
-
   const createTask = (taskVal, dateVal) => {
     if (taskVal && dateVal) {
       const newList = {
@@ -16,6 +16,7 @@ function App() {
       };
       const newListItems = [...ListItems, newList];
       setListItems(newListItems);
+     
     }
   };
 
@@ -31,10 +32,11 @@ function App() {
     <>
       <div className="container">
         <TodoName />
-        <TodoInput createTask={createTask} />
+        <TodoInput createTask={createTask}  />
       </div>
 
       <div className="container">
+        <ErrorMessage listItems={ListItems} />
         <TodoList listItems={ListItems} deleteTask={deleteTask} />
       </div>
     </>
