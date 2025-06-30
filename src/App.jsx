@@ -27,8 +27,8 @@ function App() {
       };
       const newListItems = [...ListItems, newList];
       setListItems(newListItems);
-      setTaskVal("")
-      setdateVal("")
+      setTaskVal("");
+      setdateVal("");
     }
   };
 
@@ -44,7 +44,13 @@ function App() {
     <>
       <div className="container">
         <TodoName />
-        <TodoInput createTask={createTask} taskVal={taskVal} dateVal={dateVal} takeInputDate={takeInputDate} takeInputTask={takeInputTask} />
+        <TodoInput
+          createTask={createTask}
+          taskVal={taskVal}
+          dateVal={dateVal}
+          takeInputDate={takeInputDate}
+          takeInputTask={takeInputTask}
+        />
       </div>
 
       <div className="container">

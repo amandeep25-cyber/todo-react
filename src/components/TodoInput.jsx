@@ -1,8 +1,12 @@
 import "./TodoInput.css";
 
-const TodoInput = ({ createTask ,taskVal,takeInputTask,takeInputDate,dateVal }) => {
-  
-
+const TodoInput = ({
+  createTask,
+  taskVal,
+  takeInputTask,
+  takeInputDate,
+  dateVal,
+}) => {
   return (
     <>
       <div className="input-container">
