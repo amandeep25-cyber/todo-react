@@ -5,21 +5,18 @@
     padding: 1rem 2rem;
 }
 
-.input-tag {
+.task {
     width: 40%;
-    height: 3rem;
-    border-radius: 0.2rem;
-    border: 0.1rem solid rgb(170, 170, 170);
-    padding: 0.1rem 0.6rem;
+    height: 2rem;
     font-weight: 600;
     font-size: larger;
+    padding: 0.1rem 0.6rem;
 }
 
-.add-btn {
+.remove-btn {
     width: 5rem;
     height: 3rem;
-    border: 0.1rem solid rgb(186, 186, 186);
     border-radius: 0.8rem;
-    background-color: aqua;
-    
+    background-color: rgb(18, 18, 18);
+    color: white;
 }

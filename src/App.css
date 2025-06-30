@@ -1,8 +1,19 @@
 .container {
     width : 60%;
-    background-color: pink;
     margin: 4rem auto;
     border: 1px solid black;
+    border-radius: 0.7rem;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: rgb(0, 0, 0);
+   
     
+}
+
+body{
+    background:url("https://tse2.mm.bing.net/th/id/OIP.nbRhtq2QY9SvNHfBU_nXHgHaEK?r=0&w=1280&h=720&rs=1&pid=ImgDetMain&o=7&rm=3");
+    object-fit: cover;
+    background-repeat: no-repeat;
+
 }
