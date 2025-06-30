@@ -1,19 +1,22 @@
-import "./TodoList.css"
+import "./TodoList.css";
 
-const TodoList = ({ listItems }) => {
+const TodoList = ({ listItems, deleteTask }) => {
   return (
     <>
-    {listItems.map(listItem => {
+      {listItems.map((listItem, idx) => {
         return (
-        <li className="input-container">
-        <p className="task">{listItem.task}</p>
-        <p className="task">{listItem.date}</p>
-        <button className="remove-btn">Delete</button>
-      </li>
-        
-      )
-    })}
-      
+          <li className="input-container" key={idx}>
+            <p className="task">{listItem.task}</p>
+            <p className="task">{listItem.date}</p>
+            <button
+              className="remove-btn"
+              onClick={() => deleteTask(listItem.task, listItem.date)}
+            >
+              Delete
+            </button>
+          </li>
+        );
+      })}
     </>
   );
 };

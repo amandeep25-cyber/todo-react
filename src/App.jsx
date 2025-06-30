@@ -6,16 +6,7 @@ import TodoList from "./components/TodoList";
 import { useState } from "react";
 
 function App() {
-  let [ListItems, setListItems] = useState([
-    {
-      task: "hii i am here",
-      date: "10/12/2025",
-    },
-    {
-      task: "hdsf",
-      date: "10/12/2025",
-    },
-  ]);
+  let [ListItems, setListItems] = useState([]);
 
   const createTask = (taskVal, dateVal) => {
     if (taskVal && dateVal) {
@@ -28,6 +19,14 @@ function App() {
     }
   };
 
+  const deleteTask = (taskValue, dateValue) => {
+    const newTaskLists = ListItems.filter(
+      (list) => list.task !== taskValue || list.date !== dateValue
+    );
+    console.log(taskValue, dateValue);
+    setListItems(newTaskLists);
+  };
+
   return (
     <>
       <div className="container">
@@ -36,7 +35,7 @@ function App() {
       </div>
 
       <div className="container">
-        <TodoList listItems={ListItems} />
+        <TodoList listItems={ListItems} deleteTask={deleteTask} />
       </div>
     </>
   );

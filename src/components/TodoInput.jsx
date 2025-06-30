@@ -2,8 +2,8 @@ import "./TodoInput.css";
 import { useState } from "react";
 
 const TodoInput = ({ createTask }) => {
-  let [taskVal, setTaskVal] = useState();
-  let [dateVal, setdateVal] = useState();
+  let [taskVal, setTaskVal] = useState("");
+  let [dateVal, setdateVal] = useState("");
 
   const takeInputTask = (event) => {
     setTaskVal(event.target.value);
@@ -29,7 +29,10 @@ const TodoInput = ({ createTask }) => {
           onChange={takeInputDate}
           value={dateVal}
         />
-        <button className="add-btn" onClick={()=>createTask(taskVal,dateVal)}>
+        <button
+          className="add-btn"
+          onClick={() => createTask(taskVal, dateVal)}
+        >
           Add
         </button>
       </div>
